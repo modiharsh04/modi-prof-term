@@ -50,10 +50,10 @@
 }
 
 .ascii_img {
-  flex: 0;
-  line-height: 2px;
-  font-size: 3px;
-  letter-spacing: -0.8px;
+    flex: 0;
+    line-height: 2pt;
+    font-size: 2.4pt;
+    letter-spacing: -.70pt;
 }
 
 .snippet {
