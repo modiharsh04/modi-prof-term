@@ -10,27 +10,15 @@
   --app-fonts: 'MesloLGS NF', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-#root {
-  display: flex;
-  flex: 1;
-  margin: auto;
-  flex-flow: column nowrap;
-  justify-self: center;
-  max-width: 800px;
-  overflow: hidden;
-}
-
-
 html {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-body {
+#root, body {
   box-sizing: border-box;
   margin: 0;
-  padding: 16px;
   height: 100%;
   width: 100%;
   display: flex;

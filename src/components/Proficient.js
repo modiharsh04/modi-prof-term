@@ -1,12 +1,12 @@
 import {UniqueKey} from "./util";
 import React from "react";
 
-const proficient = {
-  'Programming Languages': [
-    'Python', 'Golang', 'Java', 'JavaScript', 'React', 'React Native'
-  ],
-  'Web technologies': []
-}
+// const proficient = {
+//   'Programming Languages': [
+//     'Python', 'Golang', 'Java', 'JavaScript', 'React', 'React Native'
+//   ],
+//   'Web technologies': []
+// }
 
 export const Proficient = () => (
   <ul key={UniqueKey()}>

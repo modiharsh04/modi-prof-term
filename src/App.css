@@ -1,8 +1,33 @@
+.term-win {
+  display: flex;
+  flex: 1;
+  margin: auto;
+  flex-flow: column nowrap;
+  justify-self: center;
+  max-width: 800px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.closed {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.fullscreen {
+  max-height: unset;
+  max-width: unset;
+  height: 1000%;
+  width: 100%;
+  margin: 0 !important;
+}
+
 .header {
   background: var(--color-gray);
   border-radius: 8px 8px 0 0;
-  padding: 8px;
-  line-height: 24px;
+  padding: 5px 8px;
+  line-height: 16px;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -18,16 +43,18 @@
   flex: 1;
   padding: 8px;
   overflow: hidden auto;
-  max-width: 800px;
-  max-height: 600px;
+}
+
+.btn-grp {
+  display: flex;
 }
 
 .button {
   height: 14px;
   width: 14px;
-  margin: 8px 4px 0 0;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 50%;
+  margin-left: 4px;
 }
 
 .pre-tags {

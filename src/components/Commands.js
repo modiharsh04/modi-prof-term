@@ -8,9 +8,10 @@ import {Contact} from "./Contact";
 import {Familiar} from "./Familiar";
 import {Learning} from "./Learning";
 
-let curDirectory = '~',
-  history = [];
+let curDirectory = '~', history = [];
+
 export const GetCurDirectory = () => curDirectory;
+export const GetHistory = () => history;
 
 const getError = (cmd, arg) => {
   const errors = {
@@ -25,13 +26,7 @@ const getError = (cmd, arg) => {
 }
 
 const directories = {
-  '~': [
-    'about',
-    'contact',
-    'projects',
-    'resume',
-    'skills'
-  ],
+  '~': ['about','contact','projects','resume','skills'],
   'projects': ['coming soon...', 'check back later, please.'],
   'skills': ['proficient', 'familiar', 'learning']
 }
@@ -73,7 +68,7 @@ const ls = () => {
 }
 
 const cd = arg => {
-  if (arg === '..') {
+  if (arg === '..' || arg === 'root') {
     curDirectory = '~'
     return ''
   }

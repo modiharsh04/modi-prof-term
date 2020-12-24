@@ -1,19 +1,19 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import {GetCurDirectory} from "./Commands";
 
 function Prompt({onEnter}) {
   const [val, setVal] = useState('');
   const [disabled, setDisabled] = useState(false)
 
-  const onKeyPress = e => {
-    if (e.key === "Enter") {
+  const onKeyPress = useCallback(e => {
+    if (e.key === "Enter" || e.which === 13) {
       e.preventDefault();
       onEnter(val);
       setDisabled(true)
     } else {
       setVal(e.target.value)
     }
-  }
+  } , [val, onEnter])
 
   let curDirectory = GetCurDirectory();
 
@@ -30,7 +30,7 @@ function Prompt({onEnter}) {
         <span className="tick">></span>
         <input type={'text'}
                disabled={disabled}
-               onKeyPress={onKeyPress}
+               onKeyDown={onKeyPress}
                value={val}
                onChange={onKeyPress}
                autoCapitalize={'none'}
