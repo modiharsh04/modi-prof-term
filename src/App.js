@@ -7,10 +7,7 @@ function App() {
   const [closed, toggleClosed] = useState(false);
 
   const onKeyPress = e => {
-    if (
-      ((e.key === 'f' || e.which === 70) && e.ctrlKey) || 
-      (e.key === 'Escape' || e.which === 27)
-      ) {
+    if (e.key === 'Escape' || e.which === 27) {
       e.preventDefault();
       toggleFullscreen(oldVal => !oldVal)
     }
